@@ -1,0 +1,33 @@
+@font-face{font-family:'OleoScript-Bold';src:font-url("OleoScript-Bold.ttf") format("truetype")}
+@font-face{font-family:'OleoScript-Regular';src:font-url("OleoScript-Regular.ttf") format("truetype")}
+body{
+	background-image: url("/img/restaurant.png");
+	color:white;
+	text-align:center;
+	.row{
+		height:100vh;
+		padding-top:30vh;
+		width:100%;
+	}
+}
+
+@keyframes hideshow {
+  	0% { 
+  		opacity: 0; 
+  	}
+
+  	100% { 
+  		opacity: 1;
+  		font-size: 5em;
+  	}
+}
+
+
+
+#coming{
+	font-family:OleoScript-Bold;
+	font-size: 2em;
+	animation:hideshow 5s;
+	-webkit-animation-fill-mode: forwards;
+}
+
