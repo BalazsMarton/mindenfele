@@ -1,7 +1,7 @@
 Rails.application.configure do
 
   # replace this with your tracker code
-  GA.tracker = "ENV['GA_KEY']"
+  GA.tracker = ENV['GA_KEY']
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
