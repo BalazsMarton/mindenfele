@@ -12,6 +12,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 #secret keys
 gem "figaro"
 
+#google analytics
+gem 'google-analytics-rails', '1.1.0'
+
 #database
 gem 'pg'
 
