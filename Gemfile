@@ -8,6 +8,10 @@ gem 'font-awesome-sass', '~> 4.6.2'
 gem 'jquery-turbolinks'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+
+#secret keys
+gem "figaro"
+
 #database
 gem 'pg'
 
