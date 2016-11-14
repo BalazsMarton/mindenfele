@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="page-title">Listing Posts</h1>
+  </div>
+</div>
+<%= link_to 'New Post', new_admin_post_path %>
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th colspan="1"></th>
+      <th>Cover</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+      <td>
+      <ul class="list-unstyled">
+      <li><%= link_to '', [:admin, post], class: 'fa fa-eye fa-lg a-show-small' %></li>
+      <li><%= link_to '', edit_admin_post_path(post), class: 'fa fa-pencil-square-o fa-lg a-edit-small' %></li>
+      <li><%= link_to '', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash fa-lg a-del-small' %></li>
+      </ul>
+  
+        </td>
+        <td  data-toggle="tooltip" data-placement="right" title="<%= post.image %>"><%= image_tag post.image.thumb.url %></td>
+        <td><%= post.title %></td>
+        <td><%= post.category && post.category.name %></td>
+        <td><%= strip_tags truncate post.content, length: 30 %></td>
+        
+        
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+

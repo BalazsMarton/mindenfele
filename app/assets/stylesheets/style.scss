@@ -1,10 +1,33 @@
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+@font-face {
+font-family: '#{$font-family}';
+src: url(font-path('#{$font-filename}.eot'));
+src: url(font-path('#{$font-filename}.eot?#iefix')) format('embedded-opentype'),
+url(font-path('#{$font-filename}.woff')) format('woff'),
+url(font-path('#{$font-filename}.ttf')) format('truetype'),
+url(font-path('#{$font-filename}.svg##{$font-family}')) format('svg');
+font-weight: $font-weight;
+font-style: $font-style;
+font-stretch: $font-stretch;
+}
+}
+
+@include declare-font-face('Lobster-Regular', 'Lobster-Regular', 200);
+@include declare-font-face('GloriaHallelujah', 'GloriaHallelujah', 200);
+@include declare-font-face('PermanentMarker', 'PermanentMarker', 200);
+
 @font-face{font-family:'OleoScript-Bold';src:font-url("OleoScript-Bold.ttf") format("truetype")}
 @font-face{font-family:'OleoScript-Regular';src:font-url("OleoScript-Regular.ttf") format("truetype")}
+
 body{
-	background-image: url("/img/restaurant.png");
-	color:white;
-	text-align:center;
-	.row{
+	padding-top:200px;
+	background-color: #f7f6be;
+	background-image: url('/img/mindenfele.png');
+	background-repeat: no-repeat;
+	background-position: center 50px;
+	.coming-wrap{
+		color:white;
+		text-align:center;
 		height:100vh;
 		padding-top:30vh;
 		width:100%;
@@ -22,11 +45,107 @@ body{
   	}
 }
 
+nav{
+	font-family:GloriaHallelujah;
+	font-size: 1.2em;
+}
+.navbar-brand{
+	font-family: Lobster-Regular;
+	font-size: 1.4em;
+}
 
+#content{
+	min-height:500px;
 
+}
 #coming{
-	font-family:OleoScript-Bold;
+	color: #8b8b6b;
+	font-family:Lobster-Regular;
 	font-size: 0.5em;
 	animation:hideshow 5s;
 	-webkit-animation-fill-mode: forwards;
+}
+
+.page-title{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family:Lobster-Regular;
+	color: #8b8b6b;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px solid #8b8b6b;
+	border-bottom: 1px solid #8b8b6b;
+}
+.page-title-line{
+	border-top-color: #8b8b6b;
+}
+
+footer {
+    background: #f8f8f8;
+    border-top: 1px solid #C0C0C0;
+    padding: 80px 0px;
+}
+
+html.turbolinks-progress-bar::before {
+	background-color: #8b8b6b !important;
+	height: 5px !important;
+}
+
+.post-list-box{
+
+}
+#post-header{
+	position: relative;
+	padding:0px;
+	height:400px;
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #8b8b6b;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center;
+	#post-header-title{
+		position: absolute;
+		bottom:0px;
+		font-family:"Lobster-Regular";
+		padding:5px;
+		margin-top: 0px;
+		text-align: left;
+		width:100%;
+		background-color: rgba(0,0,0,0.4);
+		color:rgba(255,255,255,0.9);
+		h1{
+			font-size: 2em;
+			margin:0px 0px 0px 0px;
+		}
+		p{
+			line-height: 0.5;
+			margin:4px 0px 5px 0px;
+		}
+	}
+}
+#post-header-wrap{
+	margin-top: 1em;
+	margin-bottom:1em;
+}
+
+#pagination{
+
+  text-align: center;
+}
+
+#admin-sidebar{
+	border: 1px solid #8b8b6b;
+	div h1{
+		border-top:none;
+	}
+	#admin-controls{
+		padding:1em;
+	}
+	.list-group .list-group-item{
+		background-color:transparent;
+	}
 }

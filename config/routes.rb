@@ -1,6 +1,23 @@
 Rails.application.routes.draw do
- 
- root 'pages#index'
+  
+  namespace :admin do
+    resources :categories
+    resources :posts
+  end
+  get 'admin' => 'admin/posts#index'
+  mount Ckeditor::Engine => '/ckeditor'
+
+  
+  root 'pages#index'
+  get '/szorakozas' => 'pages#szorakozas'
+  get '/tudtad' => 'pages#tudtad'
+  get '/mindenfele' => 'pages#mindenfele'
+  get '/lelki' =>  'pages#lelki'
+  get '/show/:id' => 'pages#show', as: 'show_post'
+
+  get '/login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

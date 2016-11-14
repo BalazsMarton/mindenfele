@@ -6,15 +6,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
 <body>
 
-<%= render 'layouts/navbar' %>
-
-<% if current_page?(root_path) %>
-    <%= render 'pages/coming' %>
-<% end %>
+<%= render 'layouts/adminnav' %>
 
 <div class="container" id="content">
 	<div class="row">
@@ -26,7 +21,7 @@
 </div>
 
 
-<%= render 'layouts/footer' %>
+<%= render 'layouts/adminfooter' %>
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+<div class="row" id="admin-sidebar">
+	<div class="col-sm-12">
+		<h1 class="page-title">Admin</h1>
+	</div>
+	<div class="col-sm-12" id="admin-controls">
+		<% if current_admin %> 
+			<p>
+				<%= link_to "", logout_path, method: "delete", class: 'pull-right fa fa-sign-out fa-2x a-logout-big' %>
+				Bejelentkezve mint:<br>
+				<strong><%= current_admin.email %></strong>
+			</p>
+		<% else %> 
+			<ul> 
+				<li><%= link_to "Login", 'login' %></li> 
+			</ul> 
+		<% end %>
+		<ul class="list-group">
+			<li class="list-group-item">
+				<%= link_to 'Kategóriák kezelése', categories_path %>
+			</li>
+			<li class="list-group-item">
+				<%= link_to 'Cikkek kezelése', posts_path %>
+			</li>
+		</ul>
+	</div>
+</div>
