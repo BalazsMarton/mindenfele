@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :posts
   end
   get 'admin' => 'admin/posts#index'
+  devise_for :admins, path: 'admin', skip: :registrations
   mount Ckeditor::Engine => '/ckeditor'
 
   

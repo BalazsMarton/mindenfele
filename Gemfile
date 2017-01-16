@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
-gem 'ckeditor', '~> 4.1.6'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'jquery-turbolinks'
 gem 'autoprefixer-rails'

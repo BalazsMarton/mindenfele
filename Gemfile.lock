@@ -7,6 +7,14 @@ GIT
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
 
+GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 11d3a5b905646c6fd397f7710f95fb9eb29f0865
+  specs:
+    ckeditor (4.2.2)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,9 +65,6 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.6)
-    ckeditor (4.1.6)
-      cocaine
-      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -337,7 +342,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   carrierwave!
-  ckeditor (~> 4.1.6)
+  ckeditor!
   coffee-rails (~> 4.1.0)
   devise
   figaro

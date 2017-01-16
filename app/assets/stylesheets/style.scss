@@ -24,7 +24,7 @@ body{
 	background-color: #f7f6be;
 	background-image: url('/img/mindenfele.png');
 	background-repeat: no-repeat;
-	background-position: center 50px;
+	background-position: center 35px;
 	.coming-wrap{
 		color:white;
 		text-align:center;
@@ -81,9 +81,10 @@ nav{
 }
 
 footer {
+	min-height:200px;
     background: #f8f8f8;
     border-top: 1px solid #C0C0C0;
-    padding: 80px 0px;
+    padding-top: 80px;
 }
 
 html.turbolinks-progress-bar::before {
