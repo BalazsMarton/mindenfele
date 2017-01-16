@@ -18,6 +18,4 @@
 
 # Ignore application configuration
 /config/application.yml
-
-# Ignore example uploaded files
 /public/uploads
