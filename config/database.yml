@@ -26,6 +26,6 @@ production:
   pool: 5
   timeout: 5000
   host: localhost
-  database: db/production
-  username: ENV['DB_USERNAME']
-  password: ENV['DB_PASS']
+  database: mindenfele_production
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASS'] %>
