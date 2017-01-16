@@ -20,31 +20,54 @@ font-stretch: $font-stretch;
 @font-face{font-family:'OleoScript-Regular';src:font-url("OleoScript-Regular.ttf") format("truetype")}
 
 body{
-	padding-top:200px;
 	background-color: #f7f6be;
-	background-image: url('/img/mindenfele.png');
-	background-repeat: no-repeat;
-	background-position: center 35px;
+
+}
+
 	.coming-wrap{
 		color:white;
 		text-align:center;
-		height:100vh;
-		padding-top:30vh;
+		height:calc(100vh - 80px);
 		width:100%;
+		display:flex;
+	vertical-align: middle;
+	align-items: center;
+	overflow: hidden;
 	}
-}
+	.coming-wrap::before{
+		content:"";
+		display:block;
+		height:200px;
+	}
 
 @keyframes hideshow {
   	0% { 
-  		opacity: 0; 
+  		opacity: 0;
+  		-ms-transform: translate(500px, 0px); /* IE 9 */
+    	-webkit-transform: translate(500px, 0px); /* Safari */
+    	transform: translate(500px, 0px);
   	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		-ms-transform: translate(0, 0); /* IE 9 */
+    	-webkit-transform: translate(0,0); /* Safari */
+    	transform: translate(0,0);
+		font-size:10em;
+	}
 
   	100% { 
-  		opacity: 1;
-  		font-size: 2.75em;
+  		font-size: 8em;
+  		-ms-transform: translate(0,-100px); /* IE 9 */
+    	-webkit-transform: translate(0,-100px); /* Safari */
+    	transform: translate(0,-100px);
   	}
 }
 
+.navbar-wrapper{
+	height:80px;
+}
 nav{
 	font-family:GloriaHallelujah;
 	font-size: 1.2em;
@@ -55,15 +78,26 @@ nav{
 }
 
 #content{
-	min-height:500px;
+	min-height: calc(100vh - 80px);
 
 }
 #coming{
 	color: #8b8b6b;
 	font-family:Lobster-Regular;
-	font-size: 0.5em;
+	font-size: 10em;
 	animation:hideshow 5s;
 	-webkit-animation-fill-mode: forwards;
+}
+#coming-resp{
+
+	font-size: 2.5em;
+	color: #8b8b6b;
+	font-family:Lobster-Regular;
+	text-align: center;
+	width:100%;
+	-ms-transform: translate(0,-1em); /* IE 9 */
+    -webkit-transform: translate(0,-1em); /* Safari */
+    transform: translate(0,-1em);
 }
 
 .page-title{
