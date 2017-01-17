@@ -24,6 +24,11 @@ body{
 
 }
 
+.center{
+	text-align:center;
+}
+
+
 	.coming-wrap{
 		color:white;
 		text-align:center;
@@ -66,7 +71,7 @@ body{
 }
 
 .navbar-wrapper{
-	height:80px;
+	height:51px;
 }
 nav{
 	font-family:GloriaHallelujah;
@@ -78,7 +83,7 @@ nav{
 }
 
 #content{
-	min-height: calc(100vh - 80px);
+	min-height: calc(100vh - 52px);
 
 }
 #coming{
@@ -183,4 +188,14 @@ html.turbolinks-progress-bar::before {
 	.list-group .list-group-item{
 		background-color:transparent;
 	}
+}
+
+.notice-box{
+	display:absolute;
+	z-index: 5;
+
+}
+.notice-wrapper{
+	height:60px;
+	padding-top:4px;
 }

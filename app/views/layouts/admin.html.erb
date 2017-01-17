@@ -9,12 +9,19 @@
 </head>
 <body>
 
+
+<div class="navbar-wrapper">
 <%= render 'layouts/adminnav' %>
+</div>
+
 
 <div class="container" id="content">
 	<div class="row">
 	<div class="col-sm-10 col-sm-offset-1 col-lg-10 col-lg-offset-1">
+
+		<%= render 'layouts/notice' %>
 		<%= yield %>		
+	
 	</div>
 
 	</div>
