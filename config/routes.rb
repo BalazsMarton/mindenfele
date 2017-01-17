@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
   namespace :admin do
     resources :categories
     resources :posts
   end
   get 'admin' => 'admin/posts#index'
   devise_for :admins, path: 'admin', skip: :registrations
-  mount Ckeditor::Engine => '/ckeditor'
 
   
   root 'pages#index'
