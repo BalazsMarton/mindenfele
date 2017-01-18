@@ -3,13 +3,13 @@
 		<h1 class="page-title"><%= @posts.title %></h1>
     </div>
 </div>
-<div id="content-wrap">
-<div id="content">
-<div id="show-post-wrap">
-<div class="row" id="show-post">
+<div class="post-content-wrap">
+<div class="post-content">
+<div class="show-post-wrap">
+<div class="row show-post">
 		<div class="col-sm-12 col-md-12">
-			<div class="" id="post-header" style="background-image: url('<%= @posts.image.contentimg.url %>')" >
-				<div id="post-header-title">
+			<div class="post-header" style="background-image: url('<%= @posts.image.contentimg.url %>')" >
+				<div class="post-header-title">
 					<h1 >
 						<%= @posts.title %>
 					</h1>
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 						<%= link_to '', :back, class: 'fa fa-arrow-left fa-2x', id: 'arrow-back' %>
-			<div id="post-content-box">
+			<div class="post-content-box">
 			<%= raw @posts.content.html_safe %>
 			</div>
 		</div>

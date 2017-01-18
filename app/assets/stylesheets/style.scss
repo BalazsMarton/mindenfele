@@ -134,7 +134,7 @@ html.turbolinks-progress-bar::before {
 .post-list-box{
 
 }
-#post-header{
+.post-header{
 	position: relative;
 	padding:0px;
 	height:400px;
@@ -147,7 +147,7 @@ html.turbolinks-progress-bar::before {
 	background-size: cover;
 	background-repeat: no-repeat;
     background-position: center;
-	#post-header-title{
+	.post-header-title{
 		position: absolute;
 		bottom:0px;
 		font-family:"Lobster-Regular";
@@ -167,12 +167,12 @@ html.turbolinks-progress-bar::before {
 		}
 	}
 }
-#post-header-wrap{
+.post-header-wrap{
 	margin-top: 1em;
 	margin-bottom:1em;
 }
 
-#pagination{
+.posts-pagination{
 
   text-align: center;
 }

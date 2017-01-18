@@ -1,9 +1,9 @@
  <div class="row" id="post-list-box">
     <% @posts.each do |post| %>
-        <div class="col-xs-12 col-sm-12 col-md-12" id="post-header-wrap">
+        <div class="col-xs-12 col-sm-12 col-md-12 post-header-wrap">
         <%= link_to show_post_path(post) do %>
-            <div class="" id="post-header" style="background-image: url('<%= post.image.contentimg.url %>')" >
-                <div id="post-header-title">
+            <div class="post-header" style="background-image: url('<%= post.image.contentimg.url %>')" >
+                <div class="post-header-title">
                     <h1 >
                         <%= post.title %>
                     </h1>
@@ -15,7 +15,7 @@
     <% end %>
     </div>
     <div class="row">
-    <div class="col-sm-12" id="pagination">
+    <div class="col-sm-12 posts-pagination">
     <hr class="page-title-line">
 
     <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
