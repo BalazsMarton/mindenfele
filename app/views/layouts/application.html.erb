@@ -8,10 +8,7 @@
   <%= csrf_meta_tags %>
   <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
-<body style="<% if current_page?(root_path) %>
-    background-image: url('/img/mindenfele.png');background-repeat: no-repeat;
-  background-position: center 35px;
-<% end %>">
+<body>
 
 <div class="navbar-wrapper">
 <%= render 'layouts/navbar' %>
