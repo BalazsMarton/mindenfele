@@ -21,7 +21,7 @@ font-stretch: $font-stretch;
 
 body{
 	background-color: #f7f6be;
-	background-image: url('/img/congruent_pentagon.png');
+	background-image: url("/img/symphony.png");
 	background-repeat: repeat;
 
 }
@@ -29,31 +29,6 @@ body{
 .center{
 	text-align:center;
 }
-
-
-	#opening-carousel-wrap{
-		height: calc(100vh - 80px);
-		display: flex;
-		text-align: center;
-		vertical-align: middle;
-		align-items: center;
-	}
-
-	.coming-wrap{
-		color:white;
-		text-align:center;
-		height:calc(100vh - 80px);
-		width:100%;
-		display:flex;
-	vertical-align: middle;
-	align-items: center;
-	overflow: hidden;
-	}
-	.coming-wrap::before{
-		content:"";
-		display:block;
-		height:200px;
-	}
 
 @keyframes hideshow {
   	0% { 
@@ -141,6 +116,36 @@ html.turbolinks-progress-bar::before {
 	height: 5px !important;
 }
 
+/*INDEX PAGE*/
+	#opening-carousel-wrap{
+		display: flex;
+		align-items: center;
+	}
+
+	.coming-wrap{
+		color:white;
+		text-align:center;
+		height:calc(100vh - 80px);
+		width:100%;
+		display:flex;
+	vertical-align: middle;
+	align-items: center;
+	overflow: hidden;
+	}
+	.coming-wrap::before{
+		content:"";
+		display:block;
+		height:200px;
+	}
+#index-content-wrap{
+	background-color: white;
+	min-height:500px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 50px;
+}
+/*END*/
+
 .post-list-box{
 
 }
@@ -188,7 +193,8 @@ html.turbolinks-progress-bar::before {
 }
 
 .post-content-wrap{
-	    background-color: rgba(235, 253, 212,0.8);
+	    background-color: rgba(255, 255, 255,0.9);
+	    margin-bottom: 50px;
 }
 .post-content-box{
 	padding:1em;
@@ -198,7 +204,7 @@ html.turbolinks-progress-bar::before {
 	color: #8b8b6b;
 }
 .post-title-wrap{
-	background-color: rgba(235, 253, 212,0.8);
+	/*background-color: rgba(235, 253, 212,0.8);*/
 	h1{
 		margin-top: 0;
 		margin-bottom: 0;
@@ -236,3 +242,58 @@ html.turbolinks-progress-bar::before {
 	padding-top:4px;
 }
 
+/*OWL THEME*/
+.owl-carousel {
+position: relative;
+}
+.owl-prev,
+.owl-next {
+position: absolute;
+top: 50%;
+}
+.owl-prev {
+left: 0;
+}
+.owl-next {
+right: 0;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    font-family: 'fontAwesome';
+    font-size: 3em;
+    background-color: transparent;
+    margin-top: -1.5em;
+	&:hover{
+		background-color: transparent;
+	}
+}
+.owl-carousel .owl-nav .owl-prev:before{
+
+    content: "\f137";
+}
+.owl-carousel .owl-nav .owl-next:after{
+
+    content: "\f138";
+}
+/*OWL CAPTION*/
+.carousel-title{
+		position: absolute;
+		left:1em;
+		bottom:1em;
+		font-family:"Lobster-Regular";
+		padding:0.5em;
+		margin-top: 0px;
+		text-align: left;
+		background-color: rgba(255,255,255,0.9);
+		color:rgba(0,0,0,0.6);
+		h1{
+			font-size: 2em;
+			margin:0px 0px 0px 0px;
+		}
+		p{
+			line-height: 0.5;
+			margin:4px 0px 5px 0px;
+		}
+	}

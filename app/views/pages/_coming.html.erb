@@ -13,9 +13,9 @@
 	<% @posts.each do |post| %>
 		<div>
 			<%= link_to show_post_path(post) do %>
-            <div class="post-header" style="background-image: url('<%= post.image.contentimg.url %>')" >
-                <div class="post-header-title">
-                    <h1 >
+            <div class="post-header" style="background-image: url('<%= post.image.url %>')" >
+                <div class="carousel-title">
+                    <h1>
                         <%= post.title %>
                     </h1>
                     <p><%= post.created_at.to_date %></p>
