@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
 
 	def index
-
-	end
+		@posts = Post.order('created_at DESC').limit(5)	end
 
 	def tudtad
 		@posts = Post.where(:category_id => '1').order('created_at DESC').paginate(:page => params[:page], :per_page => 3)

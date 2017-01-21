@@ -9,3 +9,12 @@ Turbolinks.enableProgressBar();
  $(document).on('page:load', function(){
  	$('#admin-sidebar').affix({offset: {top: 1} });
  });
+ $(document).ready(function () {
+ 	$('.owl-carousel').owlCarousel({
+ 		items:1,
+    	margin:10,
+    	nav:true,
+    	autoHeight:true
+
+ 	});
+ });

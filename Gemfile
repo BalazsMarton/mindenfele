@@ -11,6 +11,7 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
+
 #secret keys
 gem "figaro"
 

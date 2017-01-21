@@ -31,6 +31,14 @@ body{
 }
 
 
+	#opening-carousel-wrap{
+		height: calc(100vh - 80px);
+		display: flex;
+		text-align: center;
+		vertical-align: middle;
+		align-items: center;
+	}
+
 	.coming-wrap{
 		color:white;
 		text-align:center;

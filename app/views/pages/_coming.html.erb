@@ -1,8 +1,29 @@
-<div class="row coming-wrap">
-  <div class="col-sm-12 hidden-xs" id="coming">
-    <p>Mindenféle.hu</p>
-  </div>
-  <div class="col-sm-12 hidden-sm hidden-md hidden-lg" id="coming-resp">
-    <p>Mindenféle.hu</p>
-  </div>
+<!--div class="row coming-wrap">
+	<div class="col-sm-12 hidden-xs" id="coming">
+		<p>Mindenféle.hu</p>
+	</div>
+	<div class="col-sm-12 hidden-sm hidden-md hidden-lg" id="coming-resp">
+		<p>Mindenféle.hu</p>
+	</div>
+</div-->
+
+<div class="row" id="opening-carousel-wrap" >
+	<div class="col-sm-12">
+	<div class="owl-carousel owl-theme">
+	<% @posts.each do |post| %>
+		<div>
+			<%= link_to show_post_path(post) do %>
+            <div class="post-header" style="background-image: url('<%= post.image.contentimg.url %>')" >
+                <div class="post-header-title">
+                    <h1 >
+                        <%= post.title %>
+                    </h1>
+                    <p><%= post.created_at.to_date %></p>
+                </div>
+            </div>
+            <% end %>
+		</div>
+	<% end %>
+	</div>
+	</div>
 </div>
