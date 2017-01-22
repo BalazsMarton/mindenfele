@@ -269,11 +269,9 @@ right: 0;
 	}
 }
 .owl-carousel .owl-nav .owl-prev:before{
-
     content: "\f137";
 }
 .owl-carousel .owl-nav .owl-next:after{
-
     content: "\f138";
 }
 /*OWL CAPTION*/
@@ -286,7 +284,7 @@ right: 0;
 		margin-top: 0px;
 		text-align: left;
 		color:rgba(0,0,0,0.6);
-		
+
 		h1{
 			background-color: rgba(255,255,255,0.9);
 			padding:10px;
@@ -303,14 +301,40 @@ right: 0;
 	}
 	.carousel-item{
 	padding:0px;
-	height:500px;
+	height:400px;
 	width:100%;
-	border-radius: 3px;
+	border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 	border-width: 1px;
 	border-style: solid;
+	border-top-style: none;
 	border-color: #8b8b6b;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
     background-position: center;}
+    .owl-stage-outer{
+    	border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    	-webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+    }
+	
+	/*MEDIA QUERY*/
+	 @media screen and (max-width: 767px){
+
+	 	/*carousel*/
+	 	.carousel-title{
+	 		left:0.5em;
+			bottom:0.5em;
+	 	}
+    	.carousel-title h1{
+    		border-bottom-left-radius: 15px;
+    	}
+    	p.carousel-post-date{
+    		display: none;
+    	}
+    	
+    }
