@@ -8,12 +8,11 @@
 </div-->
 
 <div class="row" id="opening-carousel-wrap" >
-	<div class="col-sm-12">
 	<div class="owl-carousel owl-theme">
 	<% @posts.each do |post| %>
 		<div>
 			<%= link_to show_post_path(post) do %>
-            <div class="post-header" style="background-image: url('<%= post.image.url %>')" >
+            <div class="carousel-item" style="background-image: url('<%= post.image.url %>')" >
                 <div class="carousel-title">
                     <h1>
                         <%= post.title %>
@@ -25,5 +24,5 @@
 		</div>
 	<% end %>
 	</div>
-	</div>
 </div>
+

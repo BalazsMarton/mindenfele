@@ -12,7 +12,6 @@ Turbolinks.enableProgressBar();
     	margin:10,
     	nav:true,
     	navText : ["",""],
-    	autoHeight:true
 
  	});
  });

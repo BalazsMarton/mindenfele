@@ -118,8 +118,7 @@ html.turbolinks-progress-bar::before {
 
 /*INDEX PAGE*/
 	#opening-carousel-wrap{
-		display: flex;
-		align-items: center;
+		padding: 0 15px;
 	}
 
 	.coming-wrap{
@@ -286,14 +285,32 @@ right: 0;
 		padding:0.5em;
 		margin-top: 0px;
 		text-align: left;
-		background-color: rgba(255,255,255,0.9);
 		color:rgba(0,0,0,0.6);
+		
 		h1{
+			background-color: rgba(255,255,255,0.9);
+			padding:10px;
 			font-size: 2em;
 			margin:0px 0px 0px 0px;
 		}
 		p{
+			display:inline-block;
+			background-color: rgba(255,255,255,0.9);
+			padding:5px;
 			line-height: 0.5;
 			margin:4px 0px 5px 0px;
 		}
 	}
+	.carousel-item{
+	padding:0px;
+	height:500px;
+	width:100%;
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #8b8b6b;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center;}
