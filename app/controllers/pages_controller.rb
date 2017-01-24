@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
 
 	def index
-		@posts = Post.order('created_at DESC').limit(5)	end
+		@posts = Post.order('created_at DESC').limit(5)
+		@randomposts = Post.where(updated_at: 168.hours.ago..Time.now).limit(5).order("RANDOM()")
+
+	end
 
 	def tudtad
 		@posts = Post.where(:category_id => '1').order('created_at DESC').paginate(:page => params[:page], :per_page => 3)

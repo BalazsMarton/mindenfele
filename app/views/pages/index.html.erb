@@ -1,3 +1,30 @@
 <div class="row" id="index-content-wrap">
-	
+	<div class="col-sm-8 col-sm-offset-2">
+	<% @randomposts.each do |post| %>
+		<div class="row">
+			<div class="col-sm-12 rpost-category">
+			<% if post.category_id == 1 %>
+				<%= link_to post.category.name, tudtad_path, :class => "category#{post.category_id}" %>
+			<% elsif post.category_id == 2 %>
+				<%= link_to post.category.name, mindenfele_path, :class => "category#{post.category_id}"  %>
+			<% elsif post.category_id == 3 %>
+				<%= link_to post.category.name, lelki_path, :class => "category#{post.category_id}"  %>
+			<% elsif post.category_id == 4 %>
+				<%= link_to post.category.name, szorakozas_path, :class => "category#{post.category_id}"  %>
+			<% end %>
+			</div>
+		<%= link_to show_post_path(post) do %>
+			<div class="col-sm-12 rpost-image">
+			<%= image_tag post.image.contentimg.url, :class => "img-responsive" %>
+			</div>
+			<div class="col-sm-12 rpost-title">
+				<div class="catcolor<%= post.category_id %>">
+				<h1><span><%= post.title %></span></h1>
+	            <p><span><%= post.created_at.to_date %></span></p>
+	        	</div>
+	        </div>
+        <% end %>
+        </div>
+	<% end %>
+	</div>
 </div>
