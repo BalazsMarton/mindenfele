@@ -326,7 +326,14 @@ right: 0;
 	
 	/*MEDIA QUERY*/
 	 @media screen and (max-width: 767px){
+		/*random post*/
+		.rpost-title div{
+		padding: 0.5em;
+			h1{
+				font-size: 1.75em
+			}
 
+		}
 	 	/*carousel*/
 	 	.carousel-title{
 	 		left:0.5em;
