@@ -9,7 +9,7 @@
 <div class="row show-post">
 		<div class="col-sm-12 col-md-12">
 			<div class="post-header" style="background-image: url('<%= @posts.image.contentimg.url %>')" >
-				<div class="post-header-title category#{post.category_id}">
+				<div class="post-header-title category<%= @post.category_id %>">
 					<h1 >
 						<%= @posts.title %>
 					</h1>

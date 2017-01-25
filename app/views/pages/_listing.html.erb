@@ -3,7 +3,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 post-header-wrap">
         <%= link_to show_post_path(post) do %>
             <div class="post-header" style="background-image: url('<%= post.image.contentimg.url %>')" >
-                <div class="post-header-title category#{post.category_id}">
+                <div class="post-header-title category<%= post.category_id %>">
                     <h1 >
                         <%= post.title %>
                     </h1>
