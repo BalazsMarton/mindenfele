@@ -170,8 +170,7 @@ html.turbolinks-progress-bar::before {
 		margin-top: 0px;
 		text-align: left;
 		width:100%;
-		background-color: rgba(0,0,0,0.4);
-		color:rgba(255,255,255,0.9);
+		color:rgba(255,255,255,1);
 		h1{
 			font-size: 2em;
 			margin:0px 0px 0px 0px;
@@ -437,4 +436,16 @@ right: 0;
 			text-decoration:none;
 		}
 	}
+}
+.post-header-title.category1{
+	background-color: rgba(102,205,170,0.7);
+}
+.post-header-title.category2{
+	background-color: rgba(100,149,237,0.7);
+}
+.post-header-title.category3{
+	background-color: rgba(250,128,114,0.7);
+}
+.post-header-title.category4{
+	background-color: rgba(186,85,211,0.7);
 }
