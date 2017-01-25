@@ -13,7 +13,24 @@ CKEDITOR.editorConfig = function( config )
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
+  /*Custom fonts*/
+  config.font_names = 'Lobster-Regular/Lobster-Regular;'+ 'Roboto-Regular/Roboto-Regular;' + config.font_names;
+    
+    /*''
+  // an array of fonts from "google fonts", I listed 3 fonts here
+  myFonts = ['Architects Daughter', 'Open Sans', 'Dancing Script'];
 
+  config.font_names = 'sans serif';
+
+  for(var i = 0; i<myFonts.length; i++){
+     config.font_names = config.font_names+';'+myFonts[i];
+     myFonts[i] = 'http://fonts.googleapis.com/css?family='+myFonts[i].replace(' ','+');
+
+     //assuming you use jquery
+      $("head").append("<link rel='stylesheet' href='"+ myFonts[i] +"'>");
+     
+  }
+  */
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";

@@ -11,10 +11,10 @@ font-style: $font-style;
 font-stretch: $font-stretch;
 }
 }
-
-@include declare-font-face('Lobster-Regular', 'Lobster-Regular', 200);
-@include declare-font-face('GloriaHallelujah', 'GloriaHallelujah', 200);
-@include declare-font-face('PermanentMarker', 'PermanentMarker', 200);
+@include declare-font-face('Roboto-Regular', 'Roboto-Regular', 400);
+@include declare-font-face('Lobster-Regular', 'Lobster-Regular', 400);
+@include declare-font-face('GloriaHallelujah', 'GloriaHallelujah', 400);
+@include declare-font-face('PermanentMarker', 'PermanentMarker', 400);
 
 @font-face{font-family:'OleoScript-Bold';src:font-url("OleoScript-Bold.ttf") format("truetype")}
 @font-face{font-family:'OleoScript-Regular';src:font-url("OleoScript-Regular.ttf") format("truetype")}
