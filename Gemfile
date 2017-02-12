@@ -53,6 +53,8 @@ gem 'rails_12factor'
 #elastic search engine
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+# elasticsearch heroku addon
+gem 'bonsai-elasticsearch-rails'
 
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.7'
