@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
-gem 'pg'
-
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'jquery-turbolinks'
@@ -19,6 +17,9 @@ gem "figaro"
 
 #google analytics
 gem 'google-analytics-rails', '1.1.0'
+
+#database
+gem 'pg'
 
 gem 'devise'
 # Use SCSS for stylesheets
