@@ -62,7 +62,7 @@ gem 'elasticsearch-rails'
 
 group :production do
 	#database postgres
-	#gem 'pg'
+	gem 'pg'
 end
 
 group :development, :test do
