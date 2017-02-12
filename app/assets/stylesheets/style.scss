@@ -232,7 +232,7 @@ html.turbolinks-progress-bar::before {
 }
 
 .notice-box{
-	display:absolute;
+	margin:0!important;
 	z-index: 5;
 
 }
@@ -448,4 +448,37 @@ right: 0;
 }
 .post-header-title.category4{
 	background-color: rgba(100,149,237,0.7);
+}
+/*KERESÉS*/
+.search-content-wrap{
+	
+	margin: 50px 0;
+	div{
+		text-align:center;
+	}
+}
+.search-wrap{
+	background-color:white;
+	display:inline-flex;
+	padding:5px 8px;
+	border:1px solid #8b8b6b;
+	border-radius:4px;
+	input{
+		font-size: 1.2em;
+		border-style:none;
+		padding:0;
+		&:focus{
+			outline: none;
+		}
+	}
+	button{
+		border-color:#8b8b6b;
+		i{
+			color:#8b8b6b;
+		}
+	}
+}
+.search-list{
+	padding:0;
+	list-style-type: none;
 }

@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="page-title">Keresés</h1>
+  </div>
+</div>
+<div class="row search-content-wrap">
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
+  
+    <%= form_for kereses_path, method: :get do |f| %>
+      <div class="search-wrap">
+        <%= text_field_tag :q, params[:q] %>
+
+        <%= button_tag(type: "submit", class: "btn btn-default",name: nil) do %>
+        <i class="fa fa-lg fa-search" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    <% end %>
+
+    <ul class="search-list">
+      <% @posts.each do |post| %>
+        <li>
+          <h3>
+            <%= link_to post.title, controller: "pages", action: "show", id: post.id %>
+          </h3>
+        </li>
+      <% end %>
+    </ul>
+  
+  </div> 
+</div>

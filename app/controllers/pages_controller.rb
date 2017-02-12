@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
 
 	def index
-		@posts = Post.order('created_at DESC').limit(5)
-		@randomposts = Post.where(updated_at: 168.hours.ago..Time.now).limit(5).order("RANDOM()")
+		@posts = Post.where.not(:category_id => nil ).order('created_at DESC').limit(5)
+		@randomposts = Post.where.not(:category_id => nil ).where(created_at: 168.hours.ago..Time.now).limit(5).order("RANDOM()")
 
 	end
 

@@ -18,9 +18,6 @@ gem "figaro"
 #google analytics
 gem 'google-analytics-rails', '1.1.0'
 
-#database
-gem 'pg'
-
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -50,6 +47,10 @@ gem "fog"
 #heroku
 gem 'rails_12factor'
 
+#elastic search engine
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.7'
 
@@ -58,6 +59,11 @@ gem 'rails_12factor'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :production do
+	#database postgres
+	#gem 'pg'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :require_admin
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [ :edit, :update, :destroy]
   before_filter :prepare_categories
   # GET /posts
   # GET /posts.json
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
