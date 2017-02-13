@@ -19,7 +19,7 @@
 			<li class="<%= 'active' if current_page?(lelki_path) %>" ><%= link_to 'Lelki egyensúly', lelki_path %></li>
 			<li class="<%= 'active' if current_page?(mindenfele_path) %>" ><%= link_to 'Mindenfelé', mindenfele_path %></li>
 			<li class="navbutton-facebook">
-				<%= link_to 'https://www.facebook.com/www.mindenfele.hu' do %>
+				<%= link_to 'https://www.facebook.com/www.mindenfele.hu', :target => "_blank" do %>
 					<i class="fa fa-facebook-square" aria-hidden="true"></i>
 				<% end %>	
 			</li>
