@@ -69,10 +69,14 @@ nav{
 	font-family: Lobster-Regular;
 	font-size: 1.4em;
 }
-.navbutton-facebook{
-	&:hover{
-		i {
-			color:#4267b2
+.navtab-social{
+	
+	.navbutton-facebook{
+		font-size:20px;
+		&:hover{
+			i {
+				color:#4867aa;
+			}
 		}
 	}
 }
