@@ -1,3 +1,4 @@
+/*PAGE INIT*/
 @mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
 @font-face {
 font-family: '#{$font-family}';
@@ -19,41 +20,43 @@ font-stretch: $font-stretch;
 @font-face{font-family:'OleoScript-Bold';src:font-url("OleoScript-Bold.ttf") format("truetype")}
 @font-face{font-family:'OleoScript-Regular';src:font-url("OleoScript-Regular.ttf") format("truetype")}
 
+html.turbolinks-progress-bar::before {
+	background-color: #8b8b6b !important;
+	height: 5px !important;
+}
+
 body{
 	background-color: #f7f6be;
 	background-image: url("/img/symphony.png");
 	background-repeat: repeat;
 
 }
+/* PAGE INIT END*/
 
+/*HOT CLASSES*/
 .center{
 	text-align:center;
 }
 
-@keyframes hideshow {
-  	0% { 
-  		opacity: 0;
-  		-ms-transform: translate(500px, 0px); /* IE 9 */
-    	-webkit-transform: translate(500px, 0px); /* Safari */
-    	transform: translate(500px, 0px);
-  	}
-	25%{
-		opacity: 1;
-	}
-	50%{
-		-ms-transform: translate(0, 0); /* IE 9 */
-    	-webkit-transform: translate(0,0); /* Safari */
-    	transform: translate(0,0);
-		font-size:10em;
-	}
+/*NAVBAR*/
 
-  	100% { 
-  		font-size: 8em;
-  		-ms-transform: translate(0,-100px); /* IE 9 */
-    	-webkit-transform: translate(0,-100px); /* Safari */
-    	transform: translate(0,-100px);
-  	}
+/*navbar container for flexible custom navbar*/
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar-container #myNavbar .nav li a{
+  	padding-left: 10px;
+  	padding-right: 10px;
+  }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-container #myNavbar .nav li a{
+  	padding-left: 10px;
+  	padding-right: 10px;
+  }
+}
+
+/*navbar container end*/
 
 .navbar-wrapper{
 	height:51px;
@@ -66,28 +69,18 @@ nav{
 	font-family: Lobster-Regular;
 	font-size: 1.4em;
 }
+.navbutton-facebook{
+	&:hover{
+		i {
+			color:#4267b2
+		}
+	}
+}
+/*NAVBAR END*/
 
 #content{
 	min-height: calc(100vh - 52px);
 
-}
-#coming{
-	color: #8b8b6b;
-	font-family:Lobster-Regular;
-	font-size: 10em;
-	animation:hideshow 5s;
-	-webkit-animation-fill-mode: forwards;
-}
-#coming-resp{
-
-	font-size: 2.5em;
-	color: #8b8b6b;
-	font-family:Lobster-Regular;
-	text-align: center;
-	width:100%;
-	-ms-transform: translate(0,-1em); /* IE 9 */
-    -webkit-transform: translate(0,-1em); /* Safari */
-    transform: translate(0,-1em);
 }
 
 .page-title{
@@ -109,11 +102,6 @@ footer {
     background: #f8f8f8;
     border-top: 1px solid #C0C0C0;
     padding-top: 80px;
-}
-
-html.turbolinks-progress-bar::before {
-	background-color: #8b8b6b !important;
-	height: 5px !important;
 }
 
 /*INDEX PAGE*/
