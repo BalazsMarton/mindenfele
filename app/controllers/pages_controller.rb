@@ -34,6 +34,11 @@ class PagesController < ApplicationController
 		set_meta_tags(title: @posts.category.name+" | "+@posts.title,
                       description: @posts.content,
                       image: @posts.image)
+		set_meta_tags og: {
+  			title:    @posts.title,
+			type:     'magazin',
+			image:    @posts.image,
+		}
 
 		
 	end
