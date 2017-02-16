@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
 	def index
-		@page_title = 'Szórakoztató magazin mindenféléről'
+		@page_title = 'Szórakoztató magazin mindenféléről mindenkinek.'
 		@page_description = 'Tudtad-e, mindenfelé, lelki egyensúly, szórakozás avagy egy magazin, ami kikapcsol.'
 		@posts = Post.where.not(:category_id => nil ).order('created_at DESC').limit(5)
 		@randomposts = Post.where.not(:category_id => nil ).where(created_at: 168.hours.ago..Time.now).limit(5).order("RANDOM()")
