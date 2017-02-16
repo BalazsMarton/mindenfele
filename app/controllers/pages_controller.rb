@@ -34,8 +34,10 @@ class PagesController < ApplicationController
 		set_meta_tags(title: @posts.category.name+" | "+@posts.title,
                       description: @posts.content,)
 		set_meta_tags og: {
-			type:     'magazin',
-			image:    @posts.image,
+			title: @posts.title	
+			type:     'website',
+			url: 	'www.mindenfele.hu/'+show_post_path(@posts)
+			image:    @posts.image.thumb.url,
 		}
 
 		
