@@ -32,10 +32,8 @@ class PagesController < ApplicationController
 		#meta gem -seo - generate post description
 		#@page_description = Post.find(params[:id]).content
 		set_meta_tags(title: @posts.category.name+" | "+@posts.title,
-                      description: @posts.content,
-                      image: @posts.image)
+                      description: @posts.content,)
 		set_meta_tags og: {
-  			title:    @posts.title,
 			type:     'magazin',
 			image:    @posts.image,
 		}
