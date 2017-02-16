@@ -36,7 +36,7 @@ class PagesController < ApplicationController
 		set_meta_tags og: {
 			title: @posts.title,
 			type:     'website',
-			url: 	'www.mindenfele.hu/'+show_post_path(@posts),
+			url: 	'http://mindenfele.hu'+show_post_path(@posts),
 			image:    @posts.image.contentimg.url,
 		}
 
