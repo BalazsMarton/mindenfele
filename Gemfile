@@ -56,6 +56,9 @@ gem 'elasticsearch-rails'
 # elasticsearch heroku addon
 gem 'bonsai-elasticsearch-rails'
 
+#seo
+gem 'meta-tags'
+
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.7'
 
