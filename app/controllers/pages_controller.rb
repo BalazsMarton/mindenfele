@@ -40,9 +40,6 @@ class PagesController < ApplicationController
 		@posts = Post.find(params[:id])
 
 		#meta gem -seo - generate post description
-		set_meta_tags fb: {
-				app_id:		ENV['FB_APPID'],
-		}
 		set_meta_tags(title: @posts.title+" - "+@posts.category.name,
                       description: @posts.content,
         )
