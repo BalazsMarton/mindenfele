@@ -1,3 +1,4 @@
+###
 initializeFacebookSDK = ->
   FB.init
     appId: '456973521359868',
@@ -11,3 +12,4 @@ jQuery ->
   delete FB
   $.getScript "//connect.facebook.net/en_US/all.js#xfbml=1", ->
     initializeFacebookSDK()
+###
