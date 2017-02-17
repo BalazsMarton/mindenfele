@@ -1,3 +1,6 @@
+<% content_for :head do %>
+    <meta property="fb:app_id" content="<%= ENV['FB_APPID'] %>" />
+<% end %>
 <div class="row">
 	<div class="col-sm-12 post-title-wrap">
 		<h1 class=""><%= @posts.title %></h1>
