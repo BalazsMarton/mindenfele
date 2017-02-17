@@ -48,6 +48,7 @@ class PagesController < ApplicationController
 			type:     'website',
 			url: 	'http://mindenfele.hu'+show_post_path(@posts),
 			image:    @posts.image.contentimg.url,
+			description: @posts.content,
 		}
 	end
 	
