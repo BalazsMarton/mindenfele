@@ -3,7 +3,6 @@
 <head>
   <%= display_meta_tags site: 'Mindenféle.hu', reverse: true, separator: "-" %>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <%= content_for?(:head) ? yield(:head) : '' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <!-- %= javascript_include_tag 'application', 'data-turbolinks-track' => true % -->
   <%= javascript_include_tag 'application', async: Rails.env.production?, 'data-turbolinks-track' => true %>
