@@ -56,7 +56,7 @@ class PagesController < ApplicationController
 				type:     'website',
 				url: 	'http://mindenfele.hu'+show_post_path(@posts),
 				image:    @posts.image.contentimg.url,
-				description: strip_tags(@posts.content).gsub(/\s+/, " ").first(300),
+				description: strip_tags(@posts.content).gsub(/\s+/, " ").first(260),
 		}
 	end
 	
