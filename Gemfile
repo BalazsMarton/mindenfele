@@ -59,6 +59,11 @@ gem 'bonsai-elasticsearch-rails'
 #seo
 gem 'meta-tags'
 
+#for html tags, entities
+gem 'nokogiri'
+gem 'htmlentities'
+gem 'truncate_html'
+
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.7'
 
