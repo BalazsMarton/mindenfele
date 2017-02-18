@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //=require jquery
-//=require facebook-turbolinks
 //=require jquery.turbolinks
 //=require jquery_ujs
 //=require turbolinks

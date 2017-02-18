@@ -9,10 +9,9 @@ initializeFacebookSDK = function () {
     });
     return typeof FB !== "undefined" && FB !== null ? (ref = FB.XFBML) != null ? ref.parse() : void 0 : void 0;
 };
-
 jQuery(function () {
     delete FB;
-    return $.getScript("//connect.facebook.net/en_US/all.js#xfbml=1", function () {
+    return $.getScript("//connect.facebook.net/hu_HU/sdk.js#xfbml=1", function () {
         return initializeFacebookSDK();
     });
 });
