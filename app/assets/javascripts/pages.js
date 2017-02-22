@@ -18,4 +18,8 @@ Turbolinks.enableProgressBar();
              CKEDITOR.replace($('.ckeditor').attr('id'));
          }
     }
+     $('.navbar-toggle').on("click", function (event) {
+         $('.navbar-toggle').toggleClass('rotate');
+         $('.navbar-toggle').toggleClass('rotate2');
+     });
  });

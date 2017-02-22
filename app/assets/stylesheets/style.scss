@@ -40,8 +40,8 @@ body{
 
 /*NAVBAR*/
 
-/*navbar container for flexible custom navbar*/
 
+/*navbar container for flexible custom navbar*/
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar-container #myNavbar .nav li a{
   	padding-left: 10px;
@@ -55,12 +55,14 @@ body{
   	padding-right: 10px;
   }
 }
-
 /*navbar container end*/
+
 
 .navbar-wrapper{
 	height:51px;
 }
+
+//navbar-fonts
 nav{
 	font-family:GloriaHallelujah;
 	font-size: 1.2em;
@@ -80,6 +82,81 @@ nav{
 		}
 	}
 }
+
+//mobile nav head-button
+#custom-navbar{
+  .navbar-header{
+    button.navbar-toggle{
+      border-radius: 0px;
+      border-color: #8b8b6b;
+      &:hover{
+        background-color:transparent;
+      }
+      &:active{
+        background-color:transparent;
+      }
+      &:focus{
+        background-color:transparent;
+      }
+
+        span.icon-bar{
+          border-radius: 0px !important;
+          background-color: #8b8b6b;
+        }
+    }
+  }
+}
+@media  (max-width: 767px) {
+  nav#full-navbar{
+    background-color: transparent;
+  }
+  div.navbar-header{
+    background-color: rgba(248, 248, 248, 0.9);
+  }
+  #myNavbar{
+    background-color: rgba(248, 248, 248, 0.9);
+  }
+}
+//background-color: rgba(248, 248, 248, 0.9);
+
+//nav-toggle button animation init
+.rotate {
+  padding:10px;
+  .icon-bar {
+    width: 22px;
+  }
+  .top-bar {transition:0.3s;
+    transform: rotate(0deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+  .bottom-bar {transition:0.3s;
+    transform: rotate(0deg);
+    transform-origin: 10% 90%;
+  }}
+
+//nav-toggle button animation
+.rotate2 {
+  padding:10px 4px 10px 10px;
+  border-color: lightsalmon!important;
+  span.icon-bar{
+    background-color:lightsalmon!important;
+  }
+  .top-bar {transition:0.3s;
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {transition:0.3s;
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
 /*NAVBAR END*/
 
 #content{
