@@ -4,8 +4,6 @@ initializeFacebookSDK = ->
     cookie: true,
     xfbml: true,
     version: 'v2.8'
-
-  FB?.XFBML?.parse()
 jQuery ->
   delete FB
   $.getScript "//connect.facebook.net/hu_HU/sdk.js#xfbml=1", ->
