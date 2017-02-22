@@ -1,10 +1,10 @@
-
+/*
 initializeFacebookSDK = function () {
     var ref;
     FB.init({
         appId: '456973521359868',
         cookie: true,
-        xfmbl: true,
+        xfbml: true,
         version: 'v2.8'
     });
     return typeof FB !== "undefined" && FB !== null ? (ref = FB.XFBML) != null ? ref.parse() : void 0 : void 0;
@@ -15,3 +15,4 @@ jQuery(function () {
         return initializeFacebookSDK();
     });
 });
+*/
