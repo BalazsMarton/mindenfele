@@ -13,13 +13,9 @@ Turbolinks.enableProgressBar();
              bg.height(jQuery(window).height()*0.5);
          };
      }
-     if(('.ckeditor').length){
+    if(('.ckeditor').length){
          if ($('.ckeditor')[0]) {
              CKEDITOR.replace($('.ckeditor').attr('id'));
          }
     }
-     $('.navbar-toggle').on("click", function (event) {
-         $('.navbar-toggle').toggleClass('rotate');
-         $('.navbar-toggle').toggleClass('rotate2');
-     });
  });
