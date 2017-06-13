@@ -31,6 +31,10 @@ CKEDITOR.editorConfig = function( config )
      
   }
   */
+
+  /*Custom styles*/
+
+
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";

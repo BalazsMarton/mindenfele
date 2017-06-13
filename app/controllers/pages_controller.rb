@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
 	def index
 		@posts = Post.where.not(:category_id => nil ).order('created_at DESC').limit(5)
-		@randomposts = Post.where.not(:category_id => nil ).where(created_at: 336.hours.ago..Time.now).limit(5).order("RANDOM()")
+		@randomposts = Post.where.not(:category_id => nil ).where(created_at: 4383.hours.ago..Time.now).limit(5).order("RANDOM()")
 
 		#meta gem -seo - generate metacontent
 		@page_title = 'Szórakoztató magazin mindenféléről mindenkinek.'
