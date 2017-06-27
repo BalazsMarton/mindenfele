@@ -66,7 +66,7 @@ $color-mindenfele: mediumorchid;
   background-color: transparent;
 }
 
-.navbar-container #myNavbar .nav{
+.public-navbar .navbar-container #myNavbar .nav{
   li.active{
     a{
       color:white;
@@ -132,14 +132,14 @@ $color-mindenfele: mediumorchid;
 
 /*navbar container for flexible custom navbar*/
 @media (min-width: 576px) and (max-width: 767px) {
-  .navbar-container #myNavbar .nav li a{
+  .public-navbar .navbar-container #myNavbar .nav li a{
   	padding-left: 10px;
   	padding-right: 10px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .navbar-container #myNavbar .nav li a{
+  .public-navbar .navbar-container #myNavbar .nav li a{
   	padding-left: 10px;
   	padding-right: 10px;
   }
@@ -401,6 +401,11 @@ footer {
 }
 
 /*ADMIN*/
+.admin-navbar {
+  .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #333;
+  }
+}
 #admin-sidebar{
 	border: 1px solid #8b8b6b;
 	div h1{
