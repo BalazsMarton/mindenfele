@@ -64,6 +64,11 @@ gem 'nokogiri'
 gem 'htmlentities'
 gem 'truncate_html'
 
+# def app server
+gem 'puma'
+#puma heroku gem
+gem 'puma-heroku'
+
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.7'
 
