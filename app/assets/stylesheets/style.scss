@@ -156,9 +156,9 @@ nav{
 	font-family: Lobster-Regular;
 	font-size: 1.2em;
 }
-.navbar-brand{
-	font-family: Lobster-Regular;
-	font-size: 1.4em;
+
+.top-nav-collapse{
+  .navbar-brand{
     p span{
       &:nth-child(1){
         color:yellowgreen;
@@ -176,6 +176,14 @@ nav{
         color:mediumorchid;
       }
     }
+  }
+}
+.navbar-brand{
+  font-family: Lobster-Regular;
+  font-size: 1.4em;
+  p span{
+    transition-duration: 2s;
+  }
 }
 .navtab-social{
 	
