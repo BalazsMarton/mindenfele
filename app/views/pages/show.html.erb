@@ -3,7 +3,7 @@
 <% end %>
 <div class="row">
 	<div class="col-sm-12 post-title-wrap">
-		<h1 class=""><%= @posts.title %></h1>
+		<h1 class="color-category<%= @posts.category_id %>"><%= @posts.title %></h1>
     </div>
 </div>
 <div class="post-content-wrap">
@@ -22,7 +22,7 @@
 		</div>
 		<div class="col-sm-12 col-md-12 post-nav-wrap">
 			<div class="post-nav">
-				<%= link_to '', :back, class: 'fa fa-arrow-left fa-2x', id: 'arrow-back' %>
+				<%= link_to '', :back, :class=> "fa fa-arrow-left fa-2x color-category#{@posts.category_id}", id: 'arrow-back' %>
 			</div>
 		</div>
 		<div class="col-sm-12 col-md-12">
