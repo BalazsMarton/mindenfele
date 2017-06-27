@@ -21,11 +21,4 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
-  host: localhost
-  database: mindenfele_production
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASS'] %>
+  url: <%= ENV['DATABASE_URL'] %>

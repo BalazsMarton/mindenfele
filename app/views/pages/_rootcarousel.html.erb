@@ -6,9 +6,9 @@
             <div class="carousel-item" style="background-image: url('<%= post.image.contentimg.url %>')" >
                 <div class="carousel-title">
                     <h1 class="highlight">
-                        <span><%= post.title %></span>
+                        <span class="color-category<%= post.category_id %>"><%= post.title %></span>
                     </h1>
-                    <p class="carousel-post-date highlight"><span><%= post.created_at.to_date %></span></p>
+                    <p class="carousel-post-date highlight"><span class="color-category<%= post.category_id %>"><%= post.created_at.to_date %></span></p>
                 </div>
             </div>
             <% end %>
