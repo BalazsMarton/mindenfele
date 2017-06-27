@@ -8,16 +8,16 @@
 			<span class="icon-bar bottom-bar"></span>
 		</button>
 	    <%= link_to root_path, class: 'navbar-brand' do %>
-	  		<p>Mindenféle</p>
+	  		<p><span>Mi</span><span>nd</span><span>en</span><span>fé</span><span>le</span></p>
 		<% end %>
 	</div>
 	<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 		<ul class="nav navbar-nav">
-			<li class="<%= 'active' if current_page?(root_path) %>" ><%= link_to 'Főoldal', root_path %></li>
-			<li class="<%= 'active' if current_page?(tudtad_path) %>" ><%= link_to 'Tudtad-e ?', tudtad_path %></li>
-			<li class="<%= 'active' if current_page?(szorakozas_path) %>" ><%= link_to 'Szórakozás', szorakozas_path %></li>
-			<li class="<%= 'active' if current_page?(lelki_path) %>" ><%= link_to 'Lelki egyensúly', lelki_path %></li>
-			<li class="<%= 'active' if current_page?(mindenfele_path) %>" ><%= link_to 'Mindenfelé', mindenfele_path %></li>
+			<li class="<%= 'active' if current_page?(root_path) %> home-tab" ><%= link_to 'Főoldal', root_path %></li>
+			<li class="<%= 'active' if current_page?(tudtad_path) %> tudtad-tab" ><%= link_to 'Tudtad-e ?', tudtad_path %></li>
+			<li class="<%= 'active' if current_page?(szorakozas_path) %> szorakozas-tab" ><%= link_to 'Szórakozás', szorakozas_path %></li>
+			<li class="<%= 'active' if current_page?(lelki_path) %> lelki-tab" ><%= link_to 'Lelki egyensúly', lelki_path %></li>
+			<li class="<%= 'active' if current_page?(mindenfele_path) %> mindenfele-tab" ><%= link_to 'Mindenfelé', mindenfele_path %></li>
 			<li class="navtab-social">
 				<%= link_to 'https://www.facebook.com/www.mindenfele.hu',:class => 'navbutton-facebook', :target => '_blank' do %>
 					<i class="fa fa-facebook-square" aria-hidden="true"></i>

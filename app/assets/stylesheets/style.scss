@@ -37,9 +37,98 @@ body{
 .center{
 	text-align:center;
 }
+$color-home: yellowgreen;
+$color-tudtad: mediumaquamarine;
+$color-szorakozas: cornflowerblue;
+$color-lelki: salmon;
+$color-mindenfele: mediumorchid;
 
+.color-home{
+  color:$color-home;
+}
+.color-tudtad{
+  color:$color-tudtad;
+}
+.color-szorakozas{
+  color:$color-szorakozas;
+}
+.color-lelki{
+  color:$color-lelki;
+}
+.color-mindenfele{
+  color:$color-mindenfele;
+}
 /*NAVBAR*/
 
+/*Navbar tab position switch from padding to line height*/
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: transparent;
+  background-color: transparent;
+}
+
+.navbar-container #myNavbar .nav{
+  li.active{
+    a{
+      color:white;
+      &:hover{
+        color:white;
+      }
+    }
+  }
+  li a{
+    color:#777;
+  }
+
+  .home-tab{
+    &.active{
+      background:yellowgreen;
+    }
+    a:hover{
+      color:yellowgreen;
+    }
+  }
+
+  .tudtad-tab{
+    &.active{
+      background:mediumaquamarine;
+    }
+    a:hover{
+      color:mediumaquamarine;
+    }
+  }
+  .szorakozas-tab{
+    &.active{
+      background:cornflowerblue;
+    }
+    a:hover{
+      color:cornflowerblue;
+    }
+  }
+  .lelki-tab{
+    &.active{
+      background:salmon;
+    }
+    a:hover{
+      color:salmon;
+    }
+  }
+
+  .mindenfele-tab{
+    &.active{
+      background:mediumorchid;
+    }
+    a:hover{
+      color:mediumorchid;
+    }
+  }
+
+  li a{
+    padding-top:0;
+    padding-bottom:0;
+    line-height: 50px;
+  }
+
+}
 
 /*navbar container for flexible custom navbar*/
 @media (min-width: 576px) and (max-width: 767px) {
@@ -64,12 +153,29 @@ body{
 
 //navbar-fonts
 nav{
-	font-family:GloriaHallelujah;
+	font-family: Lobster-Regular;
 	font-size: 1.2em;
 }
 .navbar-brand{
 	font-family: Lobster-Regular;
 	font-size: 1.4em;
+    p span{
+      &:nth-child(1){
+        color:yellowgreen;
+      }
+      &:nth-child(2){
+        color:mediumaquamarine;
+      }
+      &:nth-child(3){
+        color:cornflowerblue;
+      }
+      &:nth-child(4){
+        color:salmon;
+      }
+      &:nth-child(5){
+        color:mediumorchid;
+      }
+    }
 }
 .navtab-social{
 	
@@ -166,7 +272,6 @@ nav{
 	margin-top: 0;
 	margin-bottom: 0;
 	font-family:Lobster-Regular;
-	color: #8b8b6b;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-top: 1px solid #8b8b6b;
