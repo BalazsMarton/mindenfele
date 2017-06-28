@@ -12,6 +12,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
 
+#owl carousel 2 gem https://github.com/ilja/owlcarousel2-rails
+gem 'owlcarousel2-rails'
+
 #secret keys
 gem "figaro"
 

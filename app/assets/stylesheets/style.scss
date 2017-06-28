@@ -429,88 +429,131 @@ footer {
 	padding-top:4px;
 }
 
-/*OWL THEME*/
-.owl-carousel {
-position: relative;
-}
-.owl-prev,
-.owl-next {
-position: absolute;
-top: 50%;
-}
-.owl-prev {
-left: 0;
-}
-.owl-next {
-right: 0;
+/*OWL CUSTOM THEME*/
+
+/*OPENING CAROUSEL*/
+@keyframes openinganimation {
+  0% {
+    transform:scale(1);
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1);
+  }
+  50% {
+  }
+  100% {
+    transform:scale(1.2);
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2);
+  }
 }
 
-.owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    font-family: 'fontAwesome';
-    font-size: 3em;
-    background-color: transparent;
-    margin-top: -1.5em;
-	&:hover{
-		background-color: transparent;
-	}
-}
-.owl-carousel .owl-nav .owl-prev:before{
-    content: "\f137";
-}
-.owl-carousel .owl-nav .owl-next:after{
-    content: "\f138";
-}
-/*OWL CAPTION*/
-.carousel-title{
-	position: absolute;
-	left:1em;
-	bottom:1em;
-	font-family:"Lobster-Regular";
-	padding:0.5em;
-	margin-top: 0px;
-	text-align: left;
-	color:rgba(0,0,0,0.6);
+  .owl-item.active .carousel-item{
+    .opening-carousel-img{
+      height:400px;
+      width:100%;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: openinganimation 12000ms linear;
+      animation-fill-mode: forwards;
+    }
+  }
 
-		h1{
-			padding:0px;
-			font-size: 2em;
-			margin:0px 0px 0px 0px;
-		}
-		p{
-			display:inline-block;
-		}
-}
-.carousel-item{
-	padding:0px;
-	height:400px;
-	width:100%;
-	border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-	border-width: 1px;
-	border-style: solid;
-	border-top-style: none;
-	border-color: #8b8b6b;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-    background-position: center;
-}
-.owl-stage-outer{
-    	border-bottom-left-radius: 15px;
-    	border-bottom-right-radius: 15px;
-    	-webkit-box-shadow: 0 10px 6px -6px #777;
-       	-moz-box-shadow: 0 10px 6px -6px #777;
-        box-shadow: 0 10px 6px -6px #777;
-}
-.highlight span{
-    background-color: white;
-    box-shadow: 7px 0 0 white, -7px 0 0 white;
-    line-height: 1.4;
-}
-	
+  .owl-stage {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+  }
+
+  .opening-carousel{
+    overflow:hidden;
+  }
+  /*próba end*/
+
+  .owl-carousel {
+  position: relative;
+  }
+  .owl-prev,
+  .owl-next {
+  position: absolute;
+  top: 50%;
+  }
+  .owl-prev {
+  left: 0;
+  }
+  .owl-next {
+  right: 0;
+  }
+
+  .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next,
+    .owl-carousel .owl-dot {
+      font-family: 'fontAwesome';
+      font-size: 3em;
+      background-color: transparent;
+      margin-top: -1.5em;
+      &:hover{
+          background-color: transparent;
+      }
+  }
+  .owl-carousel .owl-nav .owl-prev:before{
+      content: "\f137";
+  }
+  .owl-carousel .owl-nav .owl-next:after{
+      content: "\f138";
+  }
+  /*OWL CAPTION*/
+  .carousel-title{
+      position: absolute;
+      z-index: 10;
+      left:1em;
+      bottom:1em;
+      font-family:"Lobster-Regular";
+      padding:0.5em;
+      margin-top: 0px;
+      text-align: left;
+      color:rgba(0,0,0,0.6);
+
+          h1{
+              padding:0px;
+              font-size: 2em;
+              margin:0px 0px 0px 0px;
+          }
+          p{
+              display:inline-block;
+          }
+  }
+  .carousel-item{
+      padding:0px;
+      height:400px;
+      width:100%;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-width: 1px;
+      border-style: solid;
+      border-top-style: none;
+      border-color: #8b8b6b;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  .owl-stage-outer{
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          -webkit-box-shadow: 0 10px 6px -6px #777;
+          -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+  }
+  .highlight span{
+      background-color: white;
+      box-shadow: 7px 0 0 white, -7px 0 0 white;
+      line-height: 1.4;
+  }
 	/*MEDIA QUERY*/
 	 @media screen and (max-width: 767px){
 		/*random post*/
