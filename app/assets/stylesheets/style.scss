@@ -26,10 +26,8 @@ html.turbolinks-progress-bar::before {
 }
 
 body{
-	background-color: #f7f6be;
 	background-image: url("/img/symphony.png");
 	background-repeat: repeat;
-
 }
 /* PAGE INIT END*/
 
@@ -59,7 +57,10 @@ $color-mindenfele: mediumorchid;
   color:$color-mindenfele!important;
 }
 /*NAVBAR*/
-
+/*Remove plus margin from resp navbar menubox*/
+.navbar-nav{
+  margin:0 -15px;
+}
 /*Navbar tab position switch from padding to line height*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: transparent;
