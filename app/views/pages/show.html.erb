@@ -1,37 +1,56 @@
 <% content_for :head do %>
-    <meta property="fb:app_id" content="456973521359868" />
+<meta property="fb:app_id" content="456973521359868" />
 <% end %>
 <div class="row">
 	<div class="col-sm-12 post-title-wrap">
 		<h1 class="color-category<%= @posts.category_id %>"><%= @posts.title %></h1>
-    </div>
+	</div>
 </div>
 <div class="post-content-wrap">
-<div class="post-content">
-<div class="show-post-wrap">
-<div class="row show-post">
-		<div class="col-sm-12 col-md-12">
-			<div class="post-header" style="background-image: url('<%= @posts.image.contentimg.url %>')" >
-				<div class="post-header-title category<%= @posts.category_id %>">
-					<h1 >
-						<%= @posts.title %>
-					</h1>
-					<p><%= @posts.created_at.to_date %></p>
+	<div class="post-content">
+		<div class="show-post-wrap">
+			<div class="row show-post">
+				<div class="col-sm-12 col-md-12">
+					<div class="post-header" style="background-image: url('<%= @posts.image.contentimg.url %>')" >
+						<div class="post-header-title category<%= @posts.category_id %>">
+							<h1 >
+								<%= @posts.title %>
+							</h1>
+							<p><%= @posts.created_at.to_date %></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-12 post-nav-wrap">
+					<div class="post-nav">
+						<%= link_to '', :back, :class=> "fa fa-arrow-left fa-2x color-category#{@posts.category_id}", id: 'arrow-back' %>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-12">
+					<div class="post-content-box">
+						<%= raw @posts.content.html_safe %>
+					</div>
+					<% if @post_attachment.blank? %>
+					<div class="post-gallery-box">
+						<div class="post-gallery owl-carousel owl-theme" id="">
+							<% @post_attachments.each do |post_attachment| %>
+							<div class="row">
+								<div class="col-sm-6 post-gallery-image-wrap">
+									<div class="post-gallery-image" style="background-image:url(<%= post_attachment.post_carouselimage.url %>);" >
+									</div>
+								</div>
+								<div class="col-sm-6 post-gallery-content-wrap">
+									<div class="post-gallery-content">
+										<%= raw post_attachment.post_carouselcontent %>							
+									</div>
+								</div>
+							</div>
+							<% end %>
+						</div></div>
+						<% end %>
+
+						<%= content_tag :div, '', :class => "fb-comments", "data-width" => "100%", "data-href" => request.original_url, "data-numposts" => "5", "data-colorscheme" => "light" %>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-12 col-md-12 post-nav-wrap">
-			<div class="post-nav">
-				<%= link_to '', :back, :class=> "fa fa-arrow-left fa-2x color-category#{@posts.category_id}", id: 'arrow-back' %>
-			</div>
-		</div>
-		<div class="col-sm-12 col-md-12">
-			<div class="post-content-box">
-        <%= raw @posts.content.html_safe %>
-			</div>
-      <%= content_tag :div, '', :class => "fb-comments", "data-width" => "100%", "data-href" => request.original_url, "data-numposts" => "5", "data-colorscheme" => "light" %>
-    </div>
-</div>
-</div>
-</div>
-</div>
+	</div>

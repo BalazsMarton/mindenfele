@@ -45,7 +45,7 @@ class PagesController < ApplicationController
 	
 	def show
 		@posts = Post.find(params[:id])
-
+		@post_attachments = PostAttachment.where("post_id = ?", @posts)
 		#meta gem -seo - generate post description
 		set_meta_tags(
 				title: @posts.title+" - "+@posts.category.name,

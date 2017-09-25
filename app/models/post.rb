@@ -2,6 +2,11 @@ require 'elasticsearch/model'
 class Post < ActiveRecord::Base
   	belongs_to  :category
   	mount_uploader :image, ImageUploader
+
+  	#for post carousels
+  	has_many :post_attachments
+   	accepts_nested_attributes_for :post_attachments
+	
 	include Elasticsearch::Model
 	include Elasticsearch::Model::Callbacks
 

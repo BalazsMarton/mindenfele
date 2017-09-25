@@ -1,20 +1,49 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @post.image.contentimg.url %>
-</p>
+<div class="row">
+	<div class="col-sm-12">
+		<%= link_to 'Edit', edit_admin_post_path(@post) %> |
+		<%= link_to 'Back', admin_posts_path %>
+	</div>
+	<div class="col-sm-12">
+		<p>
+			<strong>Title:</strong>
+			<%= @post.title %>
+		</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= raw @post.content.html_safe %>
-</p>
-<p>
-	<strong>Category:</strong>
-	<%= @post.category && @post.category.name %>
-</p>
-<%= link_to 'Edit', edit_admin_post_path(@post) %> |
-<%= link_to 'Back', admin_posts_path %>
+		<p>
+			<strong>Image:</strong>
+			<%= image_tag @post.image.contentimg.url, class: 'img-responsive' %>
+		</p>
+
+		<p>
+			<strong>Content:</strong>
+			<%= raw @post.content.html_safe %>
+		</p>
+		<p>
+			<strong>Category:</strong>
+			<%= @post.category && @post.category.name %>
+		</p>
+	</div>
+	<div class="col-sm-12">
+		<div class="post-gallery owl-carousel owl-theme" id="">
+			<% @post_attachments.each do |post_attachment| %>
+				<div class="row">
+					<div class="col-sm-6 post-gallery-image-wrap">
+						<div class="post-gallery-image" style="background-image:url(<%= post_attachment.post_carouselimage.url %>);" >
+							
+						</div>
+						<%#= image_tag (post_attachment.post_carouselimage.url), :class => "" %>							
+					</div>
+					<div class="col-sm-6 post-gallery-content-wrap">
+						<div class="post-gallery-content">
+							<% if post_attachment.post_carouselcontent.blank? %>
+							<%= link_to "Szöveg hozzáadása", edit_admin_post_attachment_path(post_attachment) %>
+							<% end %>
+							<%= raw post_attachment.post_carouselcontent %>							
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

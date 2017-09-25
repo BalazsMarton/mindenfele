@@ -10,11 +10,13 @@ class Admin::PostsController < Admin::AdminController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post_attachments = @post.post_attachments.all
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @post_attachment = @post.post_attachments.build
   end
 
   # GET /posts/1/edit
@@ -28,6 +30,13 @@ class Admin::PostsController < Admin::AdminController
 
     respond_to do |format|
       if @post.save
+        
+        unless params[:post_attachments].nil?
+          params[:post_attachments]['post_carouselimage'].each do |a|
+            @progress_attachment = @post.post_attachments.create!(:post_carouselimage => a)
+          end
+        end
+
         format.html { redirect_to [:admin, @post], notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -72,6 +81,6 @@ class Admin::PostsController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :image, :content, :category_id)
+      params.require(:post).permit(:title, :image, :content, :category_id, post_attachment_attributes:[:id, :post_id, :post_carouselimage, :post_carouselcontent])
     end
 end

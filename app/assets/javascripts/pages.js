@@ -15,6 +15,14 @@ Turbolinks.enableProgressBar();
              bgimage.height($(window).height()*0.5);
          };
      }
+    $('.post-gallery').owlCarousel({
+        items: 1,
+        margin: 15,
+        nav: true,
+        autoHeight:true,
+        navText: ["", ""],
+    });
+
     if(('.ckeditor').length){
          if ($('.ckeditor')[0]) {
              CKEDITOR.replace($('.ckeditor').attr('id'));

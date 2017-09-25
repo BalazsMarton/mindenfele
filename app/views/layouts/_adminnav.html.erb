@@ -13,6 +13,7 @@
 	<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 	<ul class="nav navbar-nav">
 	<li class="<%= 'active' if current_page?(admin_posts_path) %>"><%= link_to 'Posts', admin_posts_path %></li>
+  <li class="<%= 'active' if current_page?(admin_post_attachments_path) %>"><%= link_to 'Post Attachments', admin_post_attachments_path %></li>
 		<li class="<%= 'active' if current_page?(admin_categories_path) %>"><%= link_to 'Categories', admin_categories_path %></li>
 		<% if admin_signed_in? %>
    		<li><%= link_to 'Sign out', destroy_admin_session_path, method: :delete %></li>

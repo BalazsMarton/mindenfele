@@ -27,6 +27,12 @@
     <%= f.label :category %><br />
     <%= f.collection_select(:category_id, @categories, :id, :name, :include_blank => "Please select") %>
   </div>
+  <div class="field">
+    <%= f.fields_for :post_attachments do |p| %>
+      <%= p.label :post_carouselimage %>
+      <%= p.file_field :post_carouselimage, :multiple => true, name: "post_attachments[post_carouselimage][]" %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

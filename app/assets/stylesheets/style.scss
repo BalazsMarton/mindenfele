@@ -447,7 +447,7 @@ footer {
     -webkit-transform: scale(1.2);
   }
 }
-
+.opening-carousel{
   .owl-item.active .carousel-item{
     .opening-carousel-img{
       height:400px;
@@ -468,30 +468,29 @@ footer {
     display: -ms-box;
     display: box;
   }
-
-  .opening-carousel{
-    overflow:hidden;
-  }
+}
   /*próba end*/
-
-  .owl-carousel {
+  .opening-carousel{
   position: relative;
-  }
+  overflow:hidden;
+
   .owl-prev,
   .owl-next {
   position: absolute;
   top: 50%;
   }
+
   .owl-prev {
   left: 0;
   }
+
   .owl-next {
   right: 0;
   }
 
-  .owl-carousel .owl-nav .owl-prev,
-    .owl-carousel .owl-nav .owl-next,
-    .owl-carousel .owl-dot {
+   .owl-nav .owl-prev,
+   .owl-nav .owl-next,
+   .owl-dot {
       font-family: 'fontAwesome';
       font-size: 3em;
       background-color: transparent;
@@ -500,13 +499,15 @@ footer {
           background-color: transparent;
       }
   }
-  .owl-carousel .owl-nav .owl-prev:before{
+  .owl-nav .owl-prev::before{
       content: "\f137";
   }
-  .owl-carousel .owl-nav .owl-next:after{
+  .owl-nav .owl-next::after{
       content: "\f138";
   }
+  }
   /*OWL CAPTION*/
+  .opening-carousel{
   .carousel-title{
       position: absolute;
       z-index: 10;
@@ -581,6 +582,7 @@ footer {
     	}
     	
     }
+}
 /*RANDOM POST*/
 .rpost-title div{
 	font-family: Lobster-Regular; 
@@ -680,6 +682,78 @@ footer {
 }
 .post-header-title.category4{
 	background-color: rgba(100,149,237,0.7);
+}
+/*POST-GALLERY*/
+.post-gallery-box{
+  padding:0 1em ;
+  margin-bottom: 2em;
+}
+.post-gallery{
+  border-radius: 3px;
+  background-color:#eee;
+  overflow-x: hidden;
+  
+  .owl-stage-outer {
+    border-radius: 3px;
+    overflow:hidden;
+    background-color:white;
+    .owl-stage{
+
+        .owl-item{
+          
+          .row{
+            margin:0;
+            .post-gallery-image-wrap{
+              padding:10px;
+              height:550px;
+                .post-gallery-image{
+                  height:100%;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  border-radius: 10px;
+                }
+            }
+
+            .post-gallery-content-wrap{
+              padding:10px;
+
+              .post-gallery-content{
+
+
+              }
+
+            }
+
+          }
+
+        }
+
+    }
+
+  }
+  .owl-nav{
+    font-family: 'fontAwesome';
+    margin:0;
+    .owl-prev,.owl-next {
+    
+    }
+    .owl-prev{float:left;}
+    .owl-next{float:right;}
+    .owl-prev:before{
+      font-size:1.2em;
+      content: "\f0d9";
+    }
+    .owl-next:after{
+      font-size:1.2em;
+      content: "\f0da";
+    }
+  }
+  .owl-dots{
+    .owl-dot span {
+      margin:  15px 7px 0px 7px;
+    }
+  }
 }
 /*KERESÉS*/
 .search-content-wrap{

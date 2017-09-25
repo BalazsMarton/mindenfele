@@ -1,0 +1,8 @@
+<h1>Editing Post Attachment</h1>
+<div class="">
+	<%= link_to '', :back, :class=> "fa fa-arrow-left fa-2x", id: '' %>
+</div>
+<%= render 'form' %>
+
+<%= link_to 'Show', [:admin,@post_attachment] %> |
+<%= link_to 'Back to attachments', admin_post_attachments_path %>

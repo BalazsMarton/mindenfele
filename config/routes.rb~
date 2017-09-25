@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   
-  
+  resources :post_attachments
   mount Ckeditor::Engine => '/ckeditor'
-  
   namespace :admin do
     resources :categories
     resources :posts
-    resources :post_attachments
   end
-
   get 'admin' => 'admin/posts#index'
   devise_for :admins, path: 'admin', skip: :registrations
 
