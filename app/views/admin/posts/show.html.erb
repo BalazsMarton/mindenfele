@@ -27,23 +27,32 @@
 	<div class="col-sm-12">
 		<div class="post-gallery owl-carousel owl-theme" id="">
 			<% @post_attachments.each do |post_attachment| %>
-				<div class="row">
-					<div class="col-sm-6 post-gallery-image-wrap">
-						<div class="post-gallery-image" style="background-image:url(<%= post_attachment.post_carouselimage.url %>);" >
-							
-						</div>
-						<%#= image_tag (post_attachment.post_carouselimage.url), :class => "" %>							
-					</div>
-					<div class="col-sm-6 post-gallery-content-wrap">
-						<div class="post-gallery-content">
-							<% if post_attachment.post_carouselcontent.blank? %>
-							<%= link_to "Szöveg hozzáadása", edit_admin_post_attachment_path(post_attachment) %>
-							<% end %>
-							<%= raw post_attachment.post_carouselcontent %>							
-						</div>
-					</div>
+			<div class="row">
+				<div class="
+				<% if post_attachment.post_carouselcontent.blank? %>
+				col-sm-12
+				<% else %>
+				col-sm-6
+				<% end %> post-gallery-image-wrap">
+				<div class="post-gallery-image" style="background-image:url(<%= post_attachment.post_carouselimage.url %>);" >
+					
 				</div>
-			<% end %>
+				<%#= image_tag (post_attachment.post_carouselimage.url), :class => "img-responsive" %>							
+			</div>
+			<div class="<% if post_attachment.post_carouselcontent.blank? %>
+				col-sm-12
+				<% else %>
+				col-sm-6
+				<% end %>post-gallery-content-wrap">
+				<div class="post-gallery-content">
+					<% if post_attachment.post_carouselcontent.blank? %>
+					<%= link_to "Szöveg hozzáadása", edit_admin_post_attachment_path(post_attachment) %>
+					<% end %>
+					<%= raw post_attachment.post_carouselcontent %>							
+				</div>
+			</div>
 		</div>
+		<% end %>
 	</div>
+</div>
 </div>

@@ -34,15 +34,24 @@
 						<div class="post-gallery owl-carousel owl-theme" id="">
 							<% @post_attachments.each do |post_attachment| %>
 							<div class="row">
-								<div class="col-sm-6 post-gallery-image-wrap">
+								<div class="<% if post_attachment.post_carouselcontent.blank? %>
+									col-sm-12
+									<% else %>
+									col-sm-6
+									<% end %> post-gallery-image-wrap">
 									<div class="post-gallery-image" style="background-image:url(<%= post_attachment.post_carouselimage.url %>);" >
 									</div>
 								</div>
+								
+								<% if post_attachment.post_carouselcontent? %>
+
+								
 								<div class="col-sm-6 post-gallery-content-wrap">
 									<div class="post-gallery-content">
 										<%= raw post_attachment.post_carouselcontent %>							
 									</div>
 								</div>
+								<% end %>
 							</div>
 							<% end %>
 						</div></div>
